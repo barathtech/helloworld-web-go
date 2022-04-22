@@ -1,6 +1,6 @@
 pipeline {
   agent any
-   tool name: 'golang', type: 'go'
+  tool name: 'golang', type: 'go'
      stages { 
       stage('Build') {
         steps {
