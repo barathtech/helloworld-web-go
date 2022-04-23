@@ -12,7 +12,7 @@ pipeline {
       stage('Test') {
         steps {
              sh 'go version '
-             sh 'exit status'
+             sh 'nohup go run  main.go &'
              }
           }
        } 
