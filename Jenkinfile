@@ -1,8 +1,7 @@
-
 pipeline {
     agent any
     tools {
-        go 'go1.14'
+        go '1.18.1'
     }
      stages { 
       stage('Build') {
@@ -13,6 +12,7 @@ pipeline {
       stage('Test') {
         steps {
              sh 'go version '
+             sh 'nohup go run server.go & '
              }
           }
        } 
