@@ -1,6 +1,9 @@
+
 pipeline {
-  agent any
-  tool name: 'golang', type: 'go'
+    agent any
+    tools {
+        go 'go1.14'
+    }
      stages { 
       stage('Build') {
         steps {
